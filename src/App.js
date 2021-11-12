@@ -5,6 +5,8 @@ import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import About from './Pages/Home/About/About';
 import Review from './Pages/Home/Review/Review';
 import NotFound from './Pages/NotFound/NotFound';
+import Products from './Pages/Home/Products/Products';
+import ProductDetails from './Pages/ProductDetails/ProductDetails';
 
 function App() {
   return (
@@ -19,6 +21,12 @@ function App() {
           </Route>
           <Route path="/about">
             <About></About>
+          </Route>
+          <Route path="/productDetails/:id">
+           <ProductDetails/>
+          </Route>
+          <Route path="/products">
+            <Products/>
           </Route>
           <Route path="/review">
             <Review></Review>

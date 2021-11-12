@@ -1,0 +1,8 @@
+.banner-section {
+  height: 100vh;
+}
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import './Banner.css';
 
 const Banner = () => {
     return (
@@ -11,9 +12,11 @@ const Banner = () => {
                 <Container>
                     <Row>
                         <Col xs={12} md={12}>
-                            <h1 className="text-center py-5 mt-5">Get Fresh With Us</h1>
-                            <p className="text-center">From baby to big kid, we’re delivering mealtime, snacktime and more, right to your door.</p>
+                           <div className="banner-text">
+                           <h1>Get Fresh With Us</h1>
+                            <p>From baby to big kid, we’re delivering mealtime, snacktime and more, right to your door.</p>
                             <Button variant="primary"> Get Started</Button>
+                           </div>
                         </Col>
                     </Row>
                 </Container>

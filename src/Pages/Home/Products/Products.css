@@ -1,0 +1,12 @@
+.single-product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+@media screen and (max-width: 360px) {
+  .single-product {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

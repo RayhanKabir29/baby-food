@@ -1,0 +1,52 @@
+    [{  "service_id":"SC12",
+        "name":"Quality Patients Care",
+        "doctorName":"Kabir",
+        "doctorID":"D01",
+        "desc":"Handle patient With great care. We are No:1 in Service. Our Expert Dentist serve you with their best. You can asuure about the best",
+        "fee":300,
+        "img":"https://i.ibb.co/0GcW8bf/ser5.jpg"
+    },
+
+    {  "service_id":"SC11",
+        "name":"Teeth Cleaning",
+        "doctorName":"Rayhan",
+        "doctorID":"D02",
+        "desc":"Handle patient With great care. We are No:1 in Service. Our Expert Dentist serve you with their best. You can asuure about the best",
+        "fee":300,
+        "img":"https://i.ibb.co/SBkykW4/ser4.jpg"
+    },
+    {  "service_id":"SC10",
+        "name":"Orthodontics",
+        "doctorName":"Rana",
+        "doctorID":"D03",
+        "desc":"Handle patient With great care. We are No:1 in Service. Our Expert Dentist serve you with their best. You can asuure about the best",
+        "fee":300,
+        "img":"https://i.ibb.co/g36BfCV/ser3jpg.jpg"
+    },
+
+    {  "service_id":"SC15",
+        "name":"Teeth Whitening",
+        "doctorName":"Raafeun",
+        "doctorID":"D04",
+        "desc":"Handle patient With great care. We are No:1 in Service. Our Expert Dentist serve you with their best. You can asuure about the best",
+        "fee":300,
+        "img":"https://i.ibb.co/fHzkKVk/ser1.jpg"
+    },
+    {  "service_id":"SC01",
+        "name":"Scaling",
+        "doctorName":"Sadia Islam",
+        "doctorID":"D05",
+        "desc":"Handle patient With great care. We are No:1 in Service. Our Expert Dentist serve you with their best. You can asuure about the best",
+        "fee":500,
+        "img":"https://i.ibb.co/bgb61N6/ser6.jpg"
+    },
+
+    {  "service_id":"SC02",
+        "name":"Deep Clean",
+        "doctorName":"Maliha Kabir",
+        "doctorID":"D06",
+        "desc":"Handle patient With great care. We are No:1 in Service. Our Expert Dentist serve you with their best. You can asuure about the best",
+        "fee":200,
+        "img":"https://i.ibb.co/ZLJ5Dp2/ser-2.jpg"
+    }
+    ]
