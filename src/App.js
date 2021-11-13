@@ -7,35 +7,55 @@ import Review from './Pages/Home/Review/Review';
 import NotFound from './Pages/NotFound/NotFound';
 import Products from './Pages/Home/Products/Products';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
+import Header from './Pages/Home/Shared/Header/Header';
+import Footer from './Pages/Home/Shared/Footer/Footer';
+import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Register/Register';
+import AuthProvider from './context/AuthProvider/AuthProvider';
+import PrivateRoute from './Pages/Login/Login/PrivateRoute/PrivateRoute';
+
+
 
 function App() {
   return (
     <div className="">
+      
+      <AuthProvider>
       <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/about">
-            <About></About>
-          </Route>
-          <Route path="/productDetails/:id">
-           <ProductDetails/>
-          </Route>
-          <Route path="/products">
-            <Products/>
-          </Route>
-          <Route path="/review">
-            <Review></Review>
-          </Route>
-          <Route path="/*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
+          <Header/>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/products">
+              <Products/>
+            </Route>
+            <PrivateRoute path="/productDetails/:id">
+              <ProductDetails/>
+            </PrivateRoute>
+            <Route path="/review">
+              <Review></Review>
+            </Route>
+            <Route path="/login">
+              <Login/>
+            </Route>
+            <Route path="/register">
+              <Register/>
+            </Route>
+            <Route path="/*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer/>
       </BrowserRouter>
+      </AuthProvider>
+      
     </div>
   );
 }
