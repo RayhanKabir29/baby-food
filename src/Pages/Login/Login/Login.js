@@ -6,7 +6,7 @@ import './Login.css';
 
 const Login = () => {
     const[loginData, setLoginData] = useState({});
-    const{user, isLoading,loginWithEmail, loginWithGoogle} = useAuth();
+    const{user, isLoading,loginWithEmail, loginWithGoogle,saveUser} = useAuth();
     
     const location = useLocation();
     const history = useHistory();
@@ -28,9 +28,7 @@ const Login = () => {
     }
     const handleGoogleLogin = () =>{
         loginWithGoogle()
-        .then(result=>{
-            history.push(redirect_uri);
-        })
+       
     }
     return (
         <div>

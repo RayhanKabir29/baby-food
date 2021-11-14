@@ -43,21 +43,21 @@ function App() {
             <PrivateRoute path="/productDetails/:id">
               <ProductDetails/>
             </PrivateRoute>
-            <Route path="/addProducts">
+            <PrivateRoute path="/addProducts">
               <AddProducts/>
-            </Route>
-            <Route path="/manageProducts">
+            </PrivateRoute>
+            <PrivateRoute path="/manageProducts">
               <ManageProducts/>
-            </Route>
+            </PrivateRoute>
             <Route path="/update/:id">
               <UpdateProducts/>
             </Route>
-            <Route path="/myOrder">
+            <PrivateRoute path="/myOrder">
               <MyOrder/>
-            </Route>
-            <Route path="/review">
+            </PrivateRoute>
+            <PrivateRoute path="/review">
               <Review></Review>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login/>
             </Route>

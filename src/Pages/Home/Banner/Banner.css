@@ -6,3 +6,9 @@
   flex-direction: column;
   align-items: center;
 }
+.banner-text p {
+  width: 50%;
+  padding: 0 50px;
+  text-align: center;
+  color: #000;
+}

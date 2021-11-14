@@ -19,7 +19,7 @@ const Register = () => {
             alert('password did not match')
             return;
         }
-        addUser(loginData.email, loginData.password,history);
+        addUser(loginData.email, loginData.password,loginData.name,history);
         e.preventDefault();
     }
     return (

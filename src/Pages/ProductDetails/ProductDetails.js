@@ -35,7 +35,7 @@ const ProductDetails = () => {
            <Container>
                 <Row>
                     <Col sm={12} md={6}>
-                        <img src="" alt="" />
+                        <img src={product.img} alt=""  style={{height:'350px', width:'550px'}}/>
                         <h2>Name:{product.name}</h2>
                         <p>Detais About the Product: {product.desc}</p>
                     </Col>
