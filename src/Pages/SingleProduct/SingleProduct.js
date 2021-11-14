@@ -3,7 +3,7 @@ import { Card,Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const SingleProduct = ({product}) => {
-    const{name, desc, age, price,_id,img} = product
+    const{name, desc, age, price,_id,img} = product;
     return (
         <div>
            

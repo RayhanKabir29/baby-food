@@ -17,6 +17,9 @@ import AddProducts from './Pages/AddProducts/AddProducts';
 import ManageProducts from './Pages/MangeProducts/ManageProducts';
 import UpdateProducts from './Pages/UpdateProducts/UpdateProducts';
 import MyOrder from './Pages/MyOrder/MyOrder';
+import MakeAdmin from './Pages/MakeAdmin/MakeAdmin';
+import DashBoard from './Pages/DashBoard/DashBoardHome/DashBoard';
+import AddReview from './Pages/AddReview/AddReview';
 
 
 
@@ -26,7 +29,6 @@ function App() {
       
       <AuthProvider>
       <BrowserRouter>
-          <Header/>
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -58,17 +60,25 @@ function App() {
             <PrivateRoute path="/review">
               <Review></Review>
             </PrivateRoute>
+            <PrivateRoute path="/admin">
+              <MakeAdmin/>
+            </PrivateRoute>
             <Route path="/login">
               <Login/>
+            </Route>
+            <Route path="/addReview">
+              <AddReview/>
             </Route>
             <Route path="/register">
               <Register/>
             </Route>
+            <PrivateRoute path ="/dashboard">
+              <DashBoard/>
+            </PrivateRoute>
             <Route path="/*">
               <NotFound></NotFound>
             </Route>
           </Switch>
-          <Footer/>
       </BrowserRouter>
       </AuthProvider>
       

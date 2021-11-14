@@ -3,7 +3,9 @@ import React from 'react';
 const NotFound = () => {
     return (
         <div>
-            <h2>404 Error Not Found</h2>
+           <div className="not-found" style={{margin:'0 auto'}}>
+               <img src="https://i.ibb.co/gTNpPwt/404.webp" alt="" className="img-fluid"/>
+           </div>
         </div>
     );
 };
