@@ -20,7 +20,7 @@ const Products = () => {
               <Row>
                 <Col className="single-product">
                     {
-                    products.slice(0,location?.hash === `#home` ?6 :products?.length ).map(product => <SingleProduct
+                    products.slice(0,location?.hash === `#products` ? products?.length : 6).map(product => <SingleProduct
                     key={product._id}
                     product={product}
                     >

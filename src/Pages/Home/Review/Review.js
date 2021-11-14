@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import SingleReview from '../../SingleReview/SingleReview';
+import './Review.css';
 
 const Review = () => {
-    const [reviews, setRevies] = useState([]);
+    const [reviews, setReviews] = useState([]);
     useEffect(()=>{
         fetch('http://localhost:5000/review')
         .then(res => res.json())
-        .then (data => setRevies(data))
+        .then (data => setReviews(data))
     },[])
     return (
         <div >
