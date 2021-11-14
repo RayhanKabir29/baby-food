@@ -1,17 +1,17 @@
-.product-details {
+.add-products {
   text-align: center;
 }
-.product-details form {
+.add-products form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.product-details form input {
-  width: 40%;
+.add-products form input {
+  width: 25%;
   margin-bottom: 15px;
 }
-.product-details form textarea {
-  width: 40%;
+.add-products form textarea {
+  width: 25%;
   margin-bottom: 15px;
 }

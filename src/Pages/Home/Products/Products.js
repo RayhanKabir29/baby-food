@@ -8,7 +8,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
     const location = useLocation()
     useEffect(()=>{
-        fetch('products.json')
+        fetch('http://localhost:5000/products')
         .then(res => res.json())
         .then (data => setProducts(data))
     },[])
@@ -19,7 +19,7 @@ const Products = () => {
                 <Col className="single-product">
                     {
                     products.slice(0,location?.hash === `#products` ? products?.length:4 ).map(product => <SingleProduct
-                    key={product.service_id}
+                    key={product._id}
                     product={product}
                     >
                     </SingleProduct>)

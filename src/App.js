@@ -13,6 +13,10 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Register/Register';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/Login/PrivateRoute/PrivateRoute';
+import AddProducts from './Pages/AddProducts/AddProducts';
+import ManageProducts from './Pages/MangeProducts/ManageProducts';
+import UpdateProducts from './Pages/UpdateProducts/UpdateProducts';
+import MyOrder from './Pages/MyOrder/MyOrder';
 
 
 
@@ -39,6 +43,18 @@ function App() {
             <PrivateRoute path="/productDetails/:id">
               <ProductDetails/>
             </PrivateRoute>
+            <Route path="/addProducts">
+              <AddProducts/>
+            </Route>
+            <Route path="/manageProducts">
+              <ManageProducts/>
+            </Route>
+            <Route path="/update/:id">
+              <UpdateProducts/>
+            </Route>
+            <Route path="/myOrder">
+              <MyOrder/>
+            </Route>
             <Route path="/review">
               <Review></Review>
             </Route>
