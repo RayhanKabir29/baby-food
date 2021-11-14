@@ -12,7 +12,7 @@ const ProductDetails = () => {
     //const [singleProduct, setSingleProduct] = useState({});
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://polar-hollows-25246.herokuapp.com/products/${id}`)
         .then(res => res.json())
         .then(data => setProduct(data))
     },[]);

@@ -8,7 +8,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
     const location = useLocation()
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://polar-hollows-25246.herokuapp.com/products')
         .then(res => res.json())
         .then (data => setProducts(data))
     },[])
