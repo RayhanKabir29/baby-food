@@ -7,8 +7,6 @@ import Review from './Pages/Home/Review/Review';
 import NotFound from './Pages/NotFound/NotFound';
 import Products from './Pages/Home/Products/Products';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
-import Header from './Pages/Home/Shared/Header/Header';
-import Footer from './Pages/Home/Shared/Footer/Footer';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Register/Register';
 import AuthProvider from './context/AuthProvider/AuthProvider';
