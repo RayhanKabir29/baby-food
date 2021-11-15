@@ -10,9 +10,6 @@ const Header = () => {
     const{user, logOut} = useAuth();
     return (
         <>
-        <div className="top-header">
-           <Link to="/products"> <Button variant="primary">Explore</Button></Link>
-        </div>
         <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
             <Container>
                 <Navbar.Brand as ={HashLink} to="/home#home"><span style ={{color: 'black'}}>Baby Spoon</span></Navbar.Brand>
