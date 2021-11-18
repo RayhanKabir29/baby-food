@@ -28,7 +28,7 @@ const UpdateProducts = () => {
         setProduct(upDateProductImg);
     }
     const handleSubmit = e =>{
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `https://polar-hollows-25246.herokuapp.com/products/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -48,7 +48,7 @@ const UpdateProducts = () => {
     }
     
     useEffect(()=>{
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `https://polar-hollows-25246.herokuapp.com/products/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data =>setProduct(data))

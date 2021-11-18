@@ -10,7 +10,7 @@ import AddReview from '../../AddReview/AddReview';
 import MyOrder from '../../MyOrder/MyOrder';
 
 const DashBoard = () => {
-    const{logOut} = useAuth();
+    const{logOut, admin} = useAuth();
     let {path, url} = useRouteMatch();
     return (
     <>
@@ -19,9 +19,9 @@ const DashBoard = () => {
                 <Navbar.Brand as ={HashLink} to="/home#home"><span style ={{color: 'black'}}>Baby Spoon</span></Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
-                    <Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/manageProducts`}>Manage Order</Link>
-                    <Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/addProducts`}>Add Order</Link>
-                    <Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/admin`}>Make Admin</Link>
+                    {admin &&<Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/manageProducts`}>Manage Order</Link>}
+                   {admin && <Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/addProducts`}>Add Order</Link>}
+                   {admin && <Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/admin`}>Make Admin</Link>}
                     <Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/addReview`}> Add Review</Link>
                     <Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/myOrder`}>My Order</Link>
                     <Link style={{textDecoration:'none'}} onClick={logOut}>Log out</Link>
