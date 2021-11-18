@@ -18,6 +18,7 @@ import MyOrder from './Pages/MyOrder/MyOrder';
 import MakeAdmin from './Pages/MakeAdmin/MakeAdmin';
 import DashBoard from './Pages/DashBoard/DashBoardHome/DashBoard';
 import AddReview from './Pages/AddReview/AddReview';
+import MakePayment from './Pages/MakePayment/MakePayment';
 
 
 
@@ -72,6 +73,9 @@ function App() {
             </Route>
             <PrivateRoute path ="/dashboard">
               <DashBoard/>
+            </PrivateRoute>
+            <PrivateRoute path ="/makePayment">
+              <MakePayment/>
             </PrivateRoute>
             <Route path="/*">
               <NotFound></NotFound>

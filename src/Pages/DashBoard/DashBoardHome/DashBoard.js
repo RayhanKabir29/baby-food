@@ -8,6 +8,7 @@ import ManageProducts from '../../MangeProducts/ManageProducts';
 import AddProducts from '../../AddProducts/AddProducts';
 import AddReview from '../../AddReview/AddReview';
 import MyOrder from '../../MyOrder/MyOrder';
+import MakePayment from '../../MakePayment/MakePayment';
 
 const DashBoard = () => {
     const{logOut, admin} = useAuth();
@@ -24,6 +25,7 @@ const DashBoard = () => {
                    {admin && <Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/admin`}>Make Admin</Link>}
                     <Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/addReview`}> Add Review</Link>
                     <Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/myOrder`}>My Order</Link>
+                    <Link style={{textDecoration:'none', marginRight:'10px'}} to={`${url}/makePayment`}> Make Payment</Link>
                     <Link style={{textDecoration:'none'}} onClick={logOut}>Log out</Link>
                 </Navbar.Collapse> 
             </Container>
@@ -43,6 +45,9 @@ const DashBoard = () => {
         </Route>
         <Route path={`${path}/myOrder`}>
          <MyOrder/>
+        </Route>
+        <Route path={`${path}/makePayment`}>
+         <MakePayment/>
         </Route>
       </Switch>
     </>
