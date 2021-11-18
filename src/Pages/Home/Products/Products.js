@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row,Button } from 'react-bootstrap';
 import SingleProduct from '../../SingleProduct/SingleProduct';
 import './Products.css';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation} from 'react-router-dom';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -20,12 +20,17 @@ const Products = () => {
               <Row>
                 <Col className="single-product">
                     {
-                    products.slice(0,location?.hash === `#products` ? products?.length : 6).map(product => <SingleProduct
+                    products.slice(0,location?.hash === `#home` ? 6 : products.length).map(product => <SingleProduct
                     key={product._id}
                     product={product}
                     >
                     </SingleProduct>)
                 }
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                <Link to="/products" style={{textDecoration:'none', display:'flex', justifyContent:'center'}}> <Button variant="success" className="m-3">Explore More Baby Food</Button></Link>
                 </Col>
               </Row>
           </Container>

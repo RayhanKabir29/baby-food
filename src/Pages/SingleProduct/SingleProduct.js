@@ -19,6 +19,7 @@ const SingleProduct = ({product}) => {
                     <Link to={`/productDetails/${_id}`}><Button variant="primary">Buy Now</Button></Link>
                 </Card.Body>
             </Card>
+            
         </div>
     );
 };

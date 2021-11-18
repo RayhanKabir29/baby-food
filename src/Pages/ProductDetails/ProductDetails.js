@@ -16,18 +16,19 @@ const ProductDetails = () => {
         .then(res => res.json())
         .then(data => setProduct(data))
     },[]);
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         fetch('http://localhost:5000/orders',{
             method:'POST',
             headers:{
-                'content-type':'application/js'
+                'content-type':'application/json'
             },
             body: JSON.stringify(data)
             })
             .then(res => res.json())
             .then( data =>{
                 console.log(data)
+                reset(data);
             })         
     };
     return (
@@ -43,6 +44,7 @@ const ProductDetails = () => {
                         <h2 className="text-center mb-3">Order Your Product!</h2>
                         <div className="product-details">
                             <form onSubmit={handleSubmit(onSubmit)}>
+                            <input defaultValue={ product.name} {...register("product", { required: true})} />
                                 <input defaultValue={user.displayName} {...register("name", { required: true})} />
                                 <input defaultValue={user.email} {...register("email", { required: true})} />
                                 <input {...register("address", { required: true})} placeholder="Address"/>

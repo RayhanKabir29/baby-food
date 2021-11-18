@@ -10,13 +10,16 @@ const Header = () => {
     const{user, logOut} = useAuth();
     return (
         <>
+         <div className="top-header">
+
+        </div>
         <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
             <Container>
                 <Navbar.Brand as ={HashLink} to="/home#home"><span style ={{color: 'black'}}>Baby Spoon</span></Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                 <Nav.Link as ={HashLink} to="/home#home">Home</Nav.Link>
-                <Nav.Link as ={HashLink} to="/home#about-us">About Us</Nav.Link>
+                {/* <Nav.Link as ={HashLink} to="/home#about-us">About Us</Nav.Link> */}
                 <Nav.Link as ={HashLink} to="/home#products">Products</Nav.Link>
                     {user?.email?  <><Link onClick={logOut}>Log out</Link>
                     <Nav.Link as ={HashLink} to="/dashboard">DashBoard</Nav.Link>
