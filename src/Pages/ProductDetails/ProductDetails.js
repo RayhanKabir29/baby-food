@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import './ProductDetails.css'
 import useAuth from '../../hooks/useAuth';
