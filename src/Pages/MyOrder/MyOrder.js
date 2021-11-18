@@ -6,7 +6,7 @@ const MyOrder = () => {
     const {user} = useAuth();
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://polar-hollows-25246.herokuapp.comgit /orders?email=${user.email}`)
         .then(res => res.json())
         .then(data => setOrders(data))
     },[])
