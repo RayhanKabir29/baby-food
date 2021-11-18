@@ -1,8 +1,13 @@
 import React from 'react';
 import { Card,Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import ReactStars from "react-rating-stars-component";
 
 const SingleProduct = ({product}) => {
+    const ratingChanged = (newRating) => {
+        console.log(newRating);
+      };
+       
     const{name, desc, age, price,_id,img} = product;
     return (
         <div>
@@ -18,6 +23,12 @@ const SingleProduct = ({product}) => {
                     </Card.Text>
                     <Link to={`/productDetails/${_id}`}><Button variant="primary">Buy Now</Button></Link>
                 </Card.Body>
+                <h5>User Rating: <ReactStars
+                    count={5}
+                    onChange={ratingChanged}
+                    size={24}
+                    activeColor="#ffd700"
+                />,</h5>
             </Card>
             
         </div>

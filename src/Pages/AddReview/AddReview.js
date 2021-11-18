@@ -16,9 +16,10 @@ const AddReview = () => {
             }
         })
     };
+  
     return (
         <div className="add-review">
-        <h2 className="text-center">Add Product</h2>
+
         <form onSubmit={handleSubmit(onSubmit)}>
          <input {...register("name", { required: true})}  placeholder="Name of Reviewer"/>
          <textarea {...register("review", { required: true})}  placeholder="Review Desc"/>
