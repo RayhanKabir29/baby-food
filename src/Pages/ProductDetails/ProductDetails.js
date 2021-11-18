@@ -18,7 +18,7 @@ const ProductDetails = () => {
     },[]);
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/orders',{
+        fetch('https://polar-hollows-25246.herokuapp.com/orders',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

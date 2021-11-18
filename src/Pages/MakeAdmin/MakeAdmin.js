@@ -4,14 +4,12 @@ import axios from 'axios'
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
-    const handleOnBlur = e =>{
-        setEmail(e.target.value);
-    }
+    
     const { register, handleSubmit } = useForm();
     const onSubmit = async data => {
         let email = data.email;
         // console.log('data',data.email)
-        const res = await axios.put(`http://localhost:5000/users/admin`,{ email })
+        const res = await axios.put(`https://polar-hollows-25246.herokuapp.com/users/admin`,{ email })
         console.log('res===',res)
         // fetch('http://localhost:5000/users/admin',{
         //     method:'PUT',
